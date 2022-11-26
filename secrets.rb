@@ -1,0 +1,3 @@
+AMQP_USER = ""
+AMQP_PASSWORD = ""
+AMQP_URI = ""

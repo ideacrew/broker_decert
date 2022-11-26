@@ -1,0 +1,46 @@
+GIT
+  remote: https://github.com/ideacrew/edi_codec.git
+  revision: 2e91e70536f20b29b5dfd1a3d9ea2ac4e2a03627
+  branch: carrier_boarding
+  specs:
+    edi_codec (0.1.2)
+      activesupport (>= 3.2)
+      nokogiri (~> 1.6)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (7.0.4)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+    amq-protocol (2.3.2)
+    bunny (2.19.0)
+      amq-protocol (~> 2.3, >= 2.3.1)
+      sorted_set (~> 1, >= 1.0.2)
+    concurrent-ruby (1.1.10)
+    i18n (1.12.0)
+      concurrent-ruby (~> 1.0)
+    minitest (5.16.3)
+    nokogiri (1.13.3-x86_64-darwin)
+      racc (~> 1.4)
+    racc (1.6.0)
+    rbtree (0.4.5)
+    set (1.0.2)
+    sorted_set (1.0.3)
+      rbtree
+      set (~> 1.0)
+    tzinfo (2.0.5)
+      concurrent-ruby (~> 1.0)
+
+PLATFORMS
+  x86_64-darwin-19
+
+DEPENDENCIES
+  bunny
+  edi_codec!
+  nokogiri
+
+BUNDLED WITH
+   2.2.22
