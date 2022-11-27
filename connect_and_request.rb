@@ -2,8 +2,7 @@ require 'bunny'
 
 require_relative "./secrets"
 
-# TODO: read in CSV
-list = File.read("outstanding_list.txt")
+list = File.read("removed_broker_enrollment_id_list.txt")
 ids = list.split("\n").map(&:strip)
 
 connection = Bunny.new("amqp://#{AMQP_USER}:#{AMQP_PASSWORD}@#{AMQP_URI}")

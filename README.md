@@ -3,9 +3,7 @@
 You will need the following information to process the broker decertifications:
 
 1. Confirmation that the broker has been removed from the affected family with the correct end date on the broker account
-2. A CSV Containing:
-  1. HBX ID of the impacted enrollment (column `hbx_enrollment_id`)
-  2. Enrollment Group ID (from GlueDB) of the corresponding active policy (column `eg_id`)
+2. A CSV Containing an enter-delimited list of the hbx_enrollment ids from which the brokers were removed.  No header line is needed.
 
 # Steps
 
@@ -13,7 +11,7 @@ You will need the following information to process the broker decertifications:
 
 Remember to run all the Ruby scripts with `bundle exec ruby <scriptname>`.
 
-1. Use the source CSV to extract a more-detailed CSV from gluedb, including member start dates (use the `extract_glue_policy_data.rb` script)
+1. Use the source CSV to extract a more-detailed CSV from gluedb, including member start dates.  This will also remove the broker from the policies in question.  You will need to run this script in production even if you have generated the CSV in another environment to ensure the brokers are removed from the policies. (use the `extract_glue_policy_data.rb` script)
 2. Extract source XMLs from enroll using the `connect_and_request.rb`, and then the `connect_and_download.rb` scripts and the source CSV
 3. Enrich the XMLs using the `generate_broker_changes.rb` script
 4. Transform the XMLs to X12 using the `encode_enrollments.rb` script
