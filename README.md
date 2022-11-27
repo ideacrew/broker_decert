@@ -1,11 +1,15 @@
-# Required Inputs
+# Broker Decertification
+
+This repository contains a number of scripts and processes used to remove brokers from enrollments in bulk.
+
+## Required Inputs
 
 You will need the following information to process the broker decertifications:
 
 1. Confirmation that the broker has been removed from the affected family with the correct end date on the broker account
 2. A CSV Containing an enter-delimited list of the hbx enrollment ids from which the brokers were removed.  No header line is needed.  File should be named `removed_broker_enrollment_id_list.txt`.
 
-# Steps
+## Steps
 
 **BEFORE ANYTHING**: Update the secrets.rb file with username, password, and URI to AMQP server.
 
