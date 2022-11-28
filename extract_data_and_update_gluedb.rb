@@ -20,7 +20,7 @@ CSV.open("gluedb_extract_results.csv", "wb") do |csv|
             people_ids_and_dates[en.m_id] = en.coverage_start
           end
         end
-        # policy.broker_id = nil
+        policy.broker_id = nil
         policy.save!
         people_ids_and_dates.each_pair do |k,v|
           csv << [enrollment_id, policy.eg_id, k, v.strftime("%Y%m%d"), "OK - BROKER REMOVED"]
