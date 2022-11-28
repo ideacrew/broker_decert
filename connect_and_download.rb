@@ -1,4 +1,5 @@
 require 'bunny'
+require 'fileutils'
 
 require_relative "./secrets"
 
